@@ -1,0 +1,173 @@
+var dict = {
+					taxa_d: 1.25,
+					taxa_c: 2.5,
+					taxa_2: 4.77,
+					taxa_3: 5.56,
+					taxa_4: 6.34,
+					taxa_5: 7.11,
+					taxa_6: 7.88,
+					taxa_7: 8.64,
+					taxa_8: 9.39,
+					taxa_9: 10.12,
+					taxa_10: 10.86,
+					taxa_11: 11.58,
+					taxa_12: 12.30,
+					taxa_13: 13.01,
+					taxa_14: 13.71,
+					taxa_15: 14.40,
+					taxa_16: 15.09,
+					taxa_17: 15.77,
+					taxa_18: 16.44
+				};
+				
+			function update() {
+				
+				var select = document.getElementById('parcela');
+				var option = select.options[select.selectedIndex];	
+            	var valor_da_venda = document.getElementById('valor_unitario').value.toString().replace(",", ".")
+            
+            	document.getElementById('text2').value = ((valor_da_venda*0.7).toFixed(2)).toString().replace(".", ",")
+            	document.getElementById('text3').value = (valor_da_venda*0.3).toFixed(2).toString().replace(".", ",")
+             
+           
+				switch(document.getElementById('value').value = option.value){
+		
+					case 'Débito':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_d,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = " ";
+					break;
+					
+					case 'Crédito':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_c,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,1);	
+					break;
+					
+					case '2':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_2,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,2);	
+					break;
+					
+					case '3':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_3,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,3);	
+					break;
+					
+					case '4':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_4,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,4);	
+					break;
+					
+					case '5':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_5,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,5);	
+					break;
+					
+					case '6':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_6,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,6);	
+					break;
+											
+					case '7':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_7,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,7);	
+					break;
+					
+					case '8':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_8,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,8);	
+					break;
+					
+					case '9':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_9,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,9);	
+					break;
+					
+					case '10':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_10,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,10);	
+					break;
+					
+					
+					case '11':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_11,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,11);	
+					break;
+					
+					case '12':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_12,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,12);	
+					break;
+
+				case '13':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_13,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,13);	
+					break;
+
+				case '14':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_14,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,14);	
+					break;
+
+
+
+
+
+				case '15':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_15,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,15);	
+					break;
+
+				case '16':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_16,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,16);	
+					break;
+
+				case '17':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_17,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,17);	
+					break;
+
+				case '18':
+						var valor_a_cobrar =  valorCobrar(dict.taxa_18,valor_da_venda);
+						var cobrar = document.getElementById('text').value = valor_a_cobrar.toString().replace(".", ",");
+						document.getElementById('text1').value = nParcelas(valor_a_cobrar,18);	
+					break;
+
+
+										  
+					default:
+						console.log('CONDIÇÂO INVÁLIDA.');
+					break;
+				}
+
+				function valorCobrar(taxa,valor_da_venda){
+					var taxa = taxa/100;
+					var fator = 1/(1-taxa);
+					var valor_da_venda;
+						return (fator*valor_da_venda).toFixed(2);
+				} 
+
+				function nParcelas(valor_a_cobrar,op){
+					return op + ' parcelas de R$ ' + (valor_a_cobrar/op).toFixed(2).toString().replace(".", ",");			
+
+				}	
+			}
+			update();	
